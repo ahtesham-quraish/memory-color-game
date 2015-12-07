@@ -1,0 +1,47 @@
+#Directory Struture
+memory
+├──  Source
+│    ├── css
+│    │   └── style.css
+│    │   └── form.css
+│    │   └── model.css
+│    │── js
+│    │    └── app
+│    │          
+│    │    └── controller
+│    │        
+│    │    └── model
+│    │        
+│    │    └── directive
+│    │        
+│    │    └── service
+│    │        
+│    │── lib
+│    │── api     
+│    │── index.html
+│    │── index.php
+│  
+│── Build
+├── gruntfile.js
+└── package.json
+└── database.sql
+
+Installation Step:-
+
+#Step 1: Copy the memory directory to apache htdocs.
+
+#step 2 : Run the "database.sql" script file which is available in memory directoy on mysql query pane to create the "userinfo" database and "user" table.
+          It will also dump the some dumy data. (table name should be in small)
+
+#Step 3: In directory "memory->source->api" you will find the config.php which is used to configure the mysql connection,
+
+#step 4 : Go to chrome and hit the browser with following url "<your IP:port/memory/source>".
+
+Making build step :-
+
+#Step 1 : Please make sure that you have installed the npm and node.
+
+#step 2 : After the above step please go to memory directory by using terminal and run the following command "npm install".
+
+#step 3 : After insatlling the node modules now run the following command "grunt build". It will uglify, minify and concate your files
+          and will create the build direcory in memory root level.

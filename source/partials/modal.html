@@ -1,0 +1,28 @@
+<div class='ng-modal' ng-show='show'>
+    <div class='ng-modal-overlay' ng-click='hideModal()'></div>
+    <div class='ng-modal-dialog' ng-style='dialogStyle'>
+        <div class='ng-modal-close' ng-click='hideModal()'>X</div>
+        <div class='ng-modal-dialog-content'>
+
+            <form name="myForm" class="white-pink" novalidate ng-submit="submitForm()">
+
+                <div class="form-section">
+                    <input type="text" name="username1" ng-model="username1" required placeholder="Name" />
+                    <div class="custom-error" ng-show="myForm.username1.$dirty && myForm.username1.$invalid">Invalid:
+                        <span ng-show="myForm.username1.$error.required">Username is required.</span>
+
+                    </div>
+                    <input type="email" name="email1" ng-model="email1" required placeholder="Email" />
+
+                    <div class="custom-error error" ng-show="myForm.email1.$dirty && myForm.email1.$invalid">Invalid:
+                        <span ng-show="myForm.email1.$error.required">Email is required.</span>
+
+                        <span ng-show="myForm.email1.$error.email">Please, write a valid email address.</span>
+                    </div>
+
+                </div>
+                <input class="savebutton" type="submit" ng-disabled="myForm.email1.$pristine || myForm.email1.$dirty && myForm.email1.$invalid" />
+            </form>
+        </div>
+    </div>
+</div>

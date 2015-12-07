@@ -1,0 +1,363 @@
+body{}
+
+.row{
+    width:731px;
+    height: 581px;
+    margin: auto;
+    padding: 38px;
+    box-sizing: border-box;
+    background-color: grey;
+    position: relative;
+    background-image: url('image/a.jpg');
+    top: 30px;
+    background-size: cover; 
+    border-radius: 10%;
+}
+
+#board{
+    width: 440px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#board > .card{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    box-sizing: border-box;
+    vertical-align: top;
+    float: left;
+    color: white;
+    text-align: center;
+    border: 10px solid #FFF;
+
+}
+#controls{
+    display: inline-block;
+    width: calc(100% - 444px);
+    vertical-align: top;
+}
+.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.Notflipped {
+  -webkit-transform: rotateY( 0deg );
+  -moz-transform: rotateY( 0deg );
+  -ms-transform: rotateY( 0deg );
+  -o-transform: rotateY( 0deg );
+  transform: rotateY( 1deg );
+}
+#controls button, #controls > div{
+    display: block;
+    float: right;
+    width: 146px;
+    background-color: crimson;
+    border: 1px solid #fff;
+    margin: 10px 20px;
+    padding: 8px 10px;
+    color: #fff;
+    
+}
+#controls > .scorediv{
+    height: 100px;
+    width: 123px;
+}
+#controls > .logo{
+    background-image: url('image/logo.jpg');
+    background-size: 98%;
+    height: 70px;
+    border-radius: 10%;
+    
+}
+#controls button:last-child{
+    position: absolute;
+    bottom: 95px;
+    right: 35px;
+    border: 9px solid #8A7D7D !important;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card{
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -ms-transition: -ms-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+.card > span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.Red{background-color: red !important}
+.Green{background-color: green !important}
+.Blue{background-color: blue !important}
+.Pink{background-color: pink !important}
+.Ornage{background-color: orange !important}
+.White{background-color: white !important}
+.Purple{background-color: purple !important}
+.Yellow{background-color: yellow !important}
+
+.back {
+  background: black;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -ms-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.selected{
+    border-color: #FFFFFF !important;
+    border-style: dashed !important;
+}
+
+.user{
+    /* display: none; */
+    width: 440px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.9);
+    /* margin: 10px 0 0 10px; */
+    border-radius: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #EA123F;
+    font-size: 14px;
+    height: 437px;
+}
+.userinfo  input{
+    /* line-height: normal; */
+    /* padding-top: 10px; */
+    -webkit-appearance: none;
+    background-color: none;
+    border: 1px solid #1C1B73;
+    font-size: 17px;
+    /* width: 100%; */
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: #673AB7;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+    height: 437px;
+
+}
+.user > .userinfo{
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+}
+
+.show{
+    display: inline-block !important;
+}
+
+.hide{
+    display: none !important;
+}
+.Red-c{background-color: rgba(255,0,0,.8) !important;}
+.Green-c{background-color: rgba(0,255,0,.8) !important;}
+.Blue-c{background-color: rgba(0,0,255,.8) !important;}
+.Pink-c{background-color: rgba(255,204,255,.8) !important;}
+.Ornage-c{background-color: rgba(255,153,0,.8) !important;}
+.White-c{background-color: rgba(255,255,255,.8) !important;}
+.Purple-c{background-color: rgba(255,0,153,.8) !important;}
+.Yellow-c{background-color: rgba(255,255,0,.8) !important;}
+.nothing-c{background-color: rgba(255,255,255,.8) !important;}
+.scorediv{
+    
+    
+    border: 9px solid #8A7D7D !important;
+    padding: 8px 10px !important;
+    color: #fff;
+    border-radius: 50%;
+    /* right: -8px; */
+    height: 141px !important;
+    width: 141px !important;
+    /* left: -24px; */
+}
+
+.scorediv > div{
+    text-align: center;
+    color: #0A0A0A;
+    top: 133px;
+    /* margin-top: 41px; */
+    font-size: 75px;
+    line-height: 105px;
+}
+
+/* CSS - Shea Parker */
+
+/********* BASE **********/
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+.leaderboard {
+    position: relative;
+    /* width: 70%; */
+    /* height: 70%; */
+    /* max-width: 960px; */
+    /* min-width: 200px; */
+    margin: 60px auto 0 auto;
+    padding: 3%;
+}
+
+.leaderboard h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin:30px;
+    padding:0;
+    color: #cc7713;
+}
+
+.content {
+    position:relative;
+    width:70%;
+    margin:3px auto 0 auto;
+    min-width:300px;
+
+}
+
+.content ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    border:5px solid #CCC;
+    background: rgba(40,40,40,0.75);
+}
+.content ul li{
+    position: relative;
+    color:#FFF;
+    font-family: helvetica;
+    padding:2% 5%;
+    border-bottom: 1px solid #555;
+    text-align: left;
+}
+
+.content ul li:last-child{
+    border-bottom:none;
+    
+}
+
+.name{
+    font-weight:bold;
+}
+.count{
+    display:inline-block;
+    float:right;
+    color:#F00;
+    font-weight:bold;
+}
+.count:after{
+    color:#CCC;
+    font-size:80%;
+    font-weight:normal;
+}
+
+
+/********* BLING **********/
+.content ul{
+    border-radius: 20px;
+}
+
+.animate {
+    -moz-animation: flashIt 0.2s ease 1;
+    -webkit-animation: flashIt 0.2s ease 1;
+    animation: flashIt 0.2s ease 1;
+}
+
+.animate .countold{
+    -moz-animation: spinIt 0.3s ease 1;
+    -webkit-animation: spinIt 0.3s ease 1;
+    animation: spinIt 0.3s ease 1;
+}
+
+
+@-moz-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@-webkit-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@keyframes flashIt {
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes spinIt {
+    20% {-moz-transform: rotate(-10deg)}
+    40% {-moz-transform: rotate(10deg)}
+    60% {-moz-transform: rotate(-10deg)}
+    80% {-moz-transform: rotate(10deg)}
+    100% {-moz-transform: rotate(-10deg)}
+}
+@-webkit-keyframes spinIt {
+    20% {-webkit-transform: rotate(-10deg)}
+    40% {-webkit-transform: rotate(10deg)}
+    60% {-webkit-transform: rotate(-10deg)}
+    80% {-webkit-transform: rotate(10deg)}
+    100% {-webkit-transform: rotate(-10deg)}
+}
+@keyframes spinIt {
+     20% {transform: rotate(-10deg)}
+     40% {transform: rotate(10deg)}
+     60% {transform: rotate(-10deg)}
+     80% {transform: rotate(10deg)}
+     100% {transform: rotate(-10deg)}
+ }
+
+.ranks{
+    
+    text-align: left;
+    /* left: 0; */
+    border: 13;
+    bottom: 19px;
+    margin-bottom: 23px;
+    margin-left: 10px;
+    width: 100% !important;
+    
+}
+
+.ranks > .pos{
+    display: inline-block;
+    width: 50%;
+    font-family: sans-serif;
+}
+.ranks > .num{
+    
+    /* text-align: right; */
+    display: inline-block;
+    text-align: right;
+    width: 45%;
+}

@@ -1,0 +1,24 @@
+<div class="user" ng-class="{ 'show': user, 'hide': !user}">
+    <h2>Congrationls you have find the all pairs</h2>
+    <div class="result" ng-class="{ 'show': result, 'hide': !result}">
+        <div class='leaderboard'>
+            <div class="ranks">
+                <div class="pos">Your Postion</div>
+                <div class="num">{{yourrank}}</div>
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="">
+                        <span class="name">Top Scorer</span>
+                        <span class="count">Score</span>
+                    </li>
+                    <li class="" ng-repeat="scorer in topScorer">
+                        <span class="name">{{scorer.name}}</span>
+                        <span class="count">{{scorer.score}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

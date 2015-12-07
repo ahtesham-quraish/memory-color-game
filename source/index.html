@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="gameApp" >
+<head>    
+<!-- build:css css/optimized.css -->
+<link href="css/style.css" media="all" rel="stylesheet">
+<link href="css/modal.css" media="all" rel="stylesheet">
+<link href="css/form.css" media="all" rel="stylesheet">
+<!-- endbuild -->
+    <style>
+    [ng\: cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x- ng-cloak {
+      display: none !important;
+    }
+  </style><script src="//fast.eager.io/6ck1dgy_YL.js"></script>
+    <script src="lib/angular.js"></script>
+    </head>
+
+<body ng-controller="GameContr">
+    <div class="row" ng-cloak>
+        <div id="board" ng-class="{ 'show': !board, 'hide': !board}" arrow-selector>
+
+            <div class="card" ng-class="{ 'Nflipped': row.state, 'flipped': !row.state, 'selected':$index == selectedRow }" ng-repeat="row in game.grid">
+                <span class="back"></span>
+                <span class="{{row.color}}"></span>
+            </div>
+        </div>
+        <final-result></final-result>
+        <div id="controls">
+            <div class="logo">Logotype</div>
+            <div class="scorediv {{game.color}}-c">
+                <div ng-cloak>{{game.score}}</div>
+            </div>
+            <button ng-click="StartAgain()">Start Game</button>
+        </div>
+    </div>
+    <modal-dialog show='modalShown'>
+        <div class="userinfo">
+            <div>
+            </div>
+
+        </div>
+    </modal-dialog>
+    <script src="js/model/model.js"></script>
+    <!-- build:js js/app/optimized.js -->
+    <script src="js/offline.js"></script>
+    <script src="js/request.js"></script>
+    
+    <script src="js/directive/GameDirectve.js"></script>
+    <script src="js/controller/GameController.js"></script>
+    <script src="js/service/Gameservice.js"></script>
+    <script src="js/app/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+
+</html>
